@@ -232,16 +232,15 @@ function Hero() {
 
 // === TEAMS SECTION ===
 function Teams() {
-  const valorantTeams = [
-    "ROSO ROYAL",
-    "ROSO HYACINTH",
-    "ROSO SAPPHIRE",
-    "ROSO PARADOX",
-    "ROSO CORE",
-    "ROSO GC ACADEMY",
-    "ROSO ONYX",
-    "ROSO EIDO",
-  ];
+ const valorantTeams = [
+  "ROSO ROYAL",
+  "ROSO HYACINTH",
+  "ROSO SAPPHIRE",
+  "ROSO CORE",
+  "ROSO GC ACADEMY",
+  "ROSO EIDO",
+];
+
 
   return (
     <section id="teams" className="py-24 px-6 max-w-7xl mx-auto">
