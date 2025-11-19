@@ -255,21 +255,25 @@ function Teams() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {valorantTeams.map((team) => (
-          <motion.div
-            key={team}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg.white/5 bg-white/5 p-8 rounded-xl border border-white/10 hover:border-red-600/40 transition cursor-pointer"
-          >
-            <h3 className="text-2xl font-semibold mb-2 text-red-500">{team}</h3>
-            <p className="opacity-80">
-              {team === "ROSO ROYAL"
-                ? "Esports Academy Team"
-                : "Official ROSO Valorant Team"}
-            </p>
-          </motion.div>
-        ))}
+  <motion.div
+    key={team}
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <a href={`/team/${encodeURIComponent(team)}`}>
+      <div className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-red-600/40 transition cursor-pointer">
+        <h3 className="text-2xl font-semibold mb-2 text-red-500">{team}</h3>
+        <p className="opacity-80">
+          {team === "ROSO ROYAL"
+            ? "Esports Academy Team"
+            : "Official ROSO Valorant Team"}
+        </p>
+      </div>
+    </a>
+  </motion.div>
+))}
+
       </div>
     </section>
   );
