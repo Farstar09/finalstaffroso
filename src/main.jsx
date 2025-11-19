@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TeamPage from "./pages/TeamPage";
-import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/team/:teamId" element={<TeamPage />} />
-    </Routes>
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/team/:teamName" element={<TeamPage />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 );
