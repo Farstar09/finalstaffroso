@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // Redirect all 404s to index.html
       const redirect = sessionStorage.redirect;
       if (redirect) {
         sessionStorage.removeItem("redirect");
@@ -15,7 +14,7 @@
   <body>
     <script>
       sessionStorage.redirect = location.href;
-      window.location.href = "/finalstaffroso/";
+      window.location.href = "/";
     </script>
   </body>
 </html>
